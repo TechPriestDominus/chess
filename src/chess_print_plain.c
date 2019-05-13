@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <chess_print_plain.c>
+extern char board[8][8];
 
 void chesspp (char *board) {
     int i,j;
@@ -10,8 +11,12 @@ void chesspp (char *board) {
         }
         printf("\n");
     }
-    printf("  a b c d e f g h");
-    return 0;
+    printf("  ");
+    for (i = 0; i < 8; i++) {
+        printf("%c ", i + 97);
+    }
+printf("\n");
+
 }
 
 
