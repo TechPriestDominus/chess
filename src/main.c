@@ -1,6 +1,6 @@
-#include "board.h"
-#include "board_print_plain.h"
-#include "board_read.h"
+#include "chess.h"
+#include "chess_print_plain.h"
+#include "chess_read.h"
 #include <stdio.h>
 int x1, x2, y1, y2;
 char board[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
@@ -16,7 +16,7 @@ int main() {
 	int i,j;
 	while (1) {
 		printf("Белые");
-		chessr();
+		scanan();
 		i = white();
 		if (i=1) {
                         move();
@@ -25,7 +25,7 @@ int main() {
 		chesspp();
 
     		printf("Черные");
-		chessr();
+		scanan();
     		j = black();
     		if (i=1) {
 			move();
