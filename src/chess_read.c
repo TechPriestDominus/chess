@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-extern vhar board[8][8]
+extern char board[8][8]
 extern int x1, x2, y1, y2;
 void scanan()
 {
@@ -10,7 +10,6 @@ while (1) {
         for (int flag = 0; flag != 4;) {
             flag = 0;
             scanf("%c %d %c %d", &xx, &yy, &xx1, &yy1);
-            board(xx, yy, xx1, yy1);
             if (xx == 'a') {
                 x1 = 1;
                 flag++;
