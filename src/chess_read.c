@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "chess_read.h"
 extern char board[8][8]
 extern int x1, x2, y1, y2;
 void scanan()
