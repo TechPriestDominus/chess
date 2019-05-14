@@ -1,4 +1,5 @@
 
+
 #include "chess.h"
 #include "chess_print_plain.h"
 #include "chess_read.h"
@@ -33,7 +34,5 @@ int main() {
 		}
    		chesspp();
 	}
-	return 0;
+	return 0
 }
-
-
