@@ -1,22 +1,36 @@
+#include "board.h"
+#include "board_print_plain.h"
+#include "board_read.h"
 #include <stdio.h>
-char board[8][8] = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
-{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
-{' ',' ',' ',' ',' ',' ',' ',' '},
-{' ',' ',' ',' ',' ',' ',' ',' '},
-{' ',' ',' ',' ',' ',' ',' ',' '},
-{' ',' ',' ',' ',' ',' ',' ',' '},
-{'P','P','P','P','P','P','P','P'},
-{'R','N','B','Q','K','B','N','R'}};
-
+int x1, x2, y1, y2;
+char board[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
+                    {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+                    {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                    {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                    {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                    {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                    {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+		    {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
 int main() {
-    int i,j;
-    for(i=0;i<8;i++) {
-	printf("%d ", 8-i);
-	for(j=0;j<8;j++) {
-	    printf("%c ", board[i][j]);
+	chesspp();
+	int i,j;
+	while (1) {
+		printf("Белые");
+		chessr();
+		i = white();
+		if (i=1) {
+                        move();
+                }
+
+		chesspp();
+
+    		printf("Черные");
+		chessr();
+    		j = black();
+    		if (i=1) {
+			move();
+		}
+   		chesspp();
 	}
-	printf("\n");
-    }
-    printf("  a b c d e f g h");
-    return 0;
+	return 0;
 }
