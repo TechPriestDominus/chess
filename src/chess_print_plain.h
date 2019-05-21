@@ -1,7 +1,7 @@
 
-#ifndef BOARD_PRINT_PLAIN_H
-#define BOARD_PRINT_PLAIN_H
+#ifndef CHESS_PRINT_PLAIN_H
+#define CHESS_PRINT_PLAIN_H
 
-void chesspp () {
+void printboard();
 
 #endif

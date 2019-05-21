@@ -1,10 +1,11 @@
 
-
 #include "chess.h"
 #include "chess_print_plain.h"
 #include "chess_read.h"
 #include <stdio.h>
-int x1, x2, y1, y2;
+
+char input[7];
+int X1, X2, Y1, Y2;
 char board[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
                     {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
                     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -12,27 +13,34 @@ char board[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
                     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
                     {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
                     {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
-		    {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
+                    {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
+
 int main() {
-	chesspp();
-	int i,j;
-	while (1) {
-		printf("Белые");
-		scanan();
-		i = white();
-		if (i=1) {
-                        move();
-                }
+  int status = 0;
 
-		chesspp();
+  printboard();
 
-    		printf("Черные");
-		scanan();
-    		j = black();
-    		if (i=1) {
-			move();
-		}
-   		chesspp();
-	}
-	return 0
+  while (1) {
+    printf("Белые:");
+    scan(1);
+    move();
+    printboard();
+    status = checkWIn(1);
+    if (status != 0) {
+      break;
+    }
+
+    printf("Черные:");
+    scan(2);
+    move();
+    printboard();
+    status = checkWIn(2);
+    if (status != 0) {
+      break;
+    }
+  }
+
+  printf("                          Player %d win\n", status);
+
+  return 0;
 }

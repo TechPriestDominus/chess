@@ -1,9 +1,11 @@
-#ifndef BOARD_READ_H
-#define BOARD_READ_H
+#ifndef CHESS_READ_H
+#define CHESS_READ_H
 
+#include "chess.h"
 #include <stdio.h>
 #include <string.h>
 
-void scanan();
+void scan(int flag);
+int chartoint(char input[6]);
 
 #endif
