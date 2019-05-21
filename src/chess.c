@@ -52,7 +52,7 @@ int white() {
     if ((board[Y2][X2] == ' ') && (X2 == X1) && (Y2 - Y1 == 1)) {
       return 1;
     }
-    if ((board[Y2][X2] < 's' && board[Y2][X2] > 'a') && ((X2 - X1 == 1) || (X2 - X1 == -1)) && (Y2 - Y1 == 1) && (input[2] == 'x')) {
+    if ((board[Y2][X2] < 's' && board[Y2][X2] > 'a') && ((X2 - X1 == 1) || (X2 - X1 == -1)) && (Y2 - Y1 == 1)) {
       return 1;
     }
     break;
