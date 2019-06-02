@@ -5,6 +5,9 @@ extern char board[8][8];
 
 void printboard()
 {
+    printf("\033[2J");
+    printf("\033[0;0f");
+
     for (int i = 0; i < 2; ++i) {
         printf("\n");
     }
@@ -21,7 +24,7 @@ void printboard()
         printf("\n");
     }
 
-    printf(" ");
+    printf("   ");
     for (i = 0; i < 8; i++) {
         printf("%c ", i + 97);
     }

@@ -11,6 +11,7 @@ void move();
 int chY();
 int chX();
 int chD();
+void choose_a_pawn();
 int checkWIn(int status);
 
 #endif

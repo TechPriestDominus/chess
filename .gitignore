@@ -1,4 +1,5 @@
 .clang-format
 chessviz
+chessviz-test
 *.o
 prog
