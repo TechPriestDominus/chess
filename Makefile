@@ -13,7 +13,7 @@ build/src/chess.o: src/chess.c
 	gcc -Wall -Werror -c src/chess.c -o build/src/chess.o
 
 build/src/chess_read.o: src/chess_read.c
-	gcc -Wall -Werror -c src/board_read.c -o build/src/chess_read.o
+	gcc -Wall -Werror -c src/chess_read.c -o build/src/chess_read.o
 
 bin/chessviz-test: build/test/main.o build/test/test.o build/src/chess.o build/src/chess_print_plain.o build/src/chess_read.o
 	gcc -Wall -Werror build/test/main.o build/test/test.o build/src/chess.o build/src/chess_print_plain.o build/src/chess_read.o -o bin/chessviz-test
