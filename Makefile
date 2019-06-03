@@ -1,4 +1,7 @@
-all: bin/chessviz bin/chessviz-test
+all: bin/chessviz 
+
+test: bin/chessviz-test
+	./bin/chessviz-test
 
 bin/chessviz: build/src/main.o build/src/chess_print_plain.o build/src/chess.o build/src/chess_read.o
 	gcc -Wall -Werror build/src/main.o build/src/chess_print_plain.o build/src/chess.o build/src/chess_read.o -o bin/chessviz
@@ -28,4 +31,4 @@ build/test/test.o: test/test.c
 .PHONY: clean
 
 clean:
-	rm -rf build/*.o
+	rm -rf build/*/*.o
